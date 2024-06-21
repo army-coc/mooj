@@ -1,0 +1,35 @@
+{
+	"manifest_version": 3,
+	"name": "문전 (MOOJ)",
+	"description": "문전 (MOOJ)",
+	"version": "1.0.0",
+	"icons": {
+		"128": "assets/icon.png"
+	},
+	"options_page": "option/index.html",
+	"host_permissions": [
+		"http://sms.army.mil/",
+		"http://hub.army.mil/"
+	],
+	"optional_host_permissions": [
+		"https://*/*",
+		"http://*/*"
+	],
+	"permissions": [
+		"activeTab",
+		"offscreen",
+		"tabs",
+		"scripting"
+	],
+	"web_accessible_resources": [
+		{
+			"resources": [
+				"assets/logo.png",
+				"assets/icon.png"
+			],
+			"matches": [
+				"*://*/*"
+			]
+		}
+	]
+}
