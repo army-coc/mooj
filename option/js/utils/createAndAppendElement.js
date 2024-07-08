@@ -1,4 +1,4 @@
-function createAndAppendElement(tag, parent, attributes = {}, classes = []) {
+function createAndAppendElement(tag, parent, attributes = {}, classes = [], eventListeners = []) {
   const element = document.createElement(tag);
 
   for (const key in attributes) {
@@ -14,6 +14,10 @@ function createAndAppendElement(tag, parent, attributes = {}, classes = []) {
   if (classes.length > 0) {
     element.classList.add(...classes);
   }
+
+  eventListeners.forEach(({ event, handler }) => {
+    element.addEventListener(event, handler);
+  });
 
   parent.appendChild(element);
   return element;
